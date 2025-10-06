@@ -75,9 +75,9 @@ def metric(data_iter, rel_vocab, config, model, output=True, h_bar=0.5, t_bar=0.
 
             if output:
                 if not os.path.exists(config.result_dir):
-                    os.mkdir(config.result_dir)
+                    os.makedirs(config.result_dir)
                 path = os.path.join(config.result_dir, config.result_save_name)
-                fw = open(path, 'w')
+                fw = open(path, 'a')
                 result = json.dumps({
                     'triple_list_gold': [
                         dict(zip(orders, triple)) for triple in gold_triples

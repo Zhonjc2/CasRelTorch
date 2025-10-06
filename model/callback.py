@@ -39,6 +39,8 @@ class MyCallBack(Callback):
             self.logging("Saving the model, epoch: {:3d}, best f1: {:4.2f}, precision: {:4.2f}, recall: {:4.2f}".
                          format(self.best_epoch, self.best_f1_score, precision, recall))
             path = os.path.join(self.config.save_weights_dir, self.config.weights_save_name)
+            if not os.path.exists(self.config.save_weights_dir):
+              os.makedirs(self.config.save_weights_dir)
             torch.save(self.model.state_dict(), path)
 
     def on_train_end(self):
