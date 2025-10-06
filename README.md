@@ -21,11 +21,11 @@ The changes I have made are listed:
 - I changed the encoding and decoding methods in order to fit the Chinese Dataset.
 - I reconstruct the structure for readability.
 # Requirements
-- torch==1.8.0+cu111
+- torch
 - transformers==4.3.3
 - fastNLP==0.6.0
 - tqdm==4.59.0
-- numpy==1.20.1
+- numpy
 # Dataset
 I preprocessed the open-source dataset from Baidu. I did some cleaning, so the data given have 18 relation types. 
 Some noisy data are eliminated.
