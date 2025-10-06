@@ -1,3 +1,5 @@
+Just a fixed variation of original repo.
+
 # Notice
 This repository is no longer maintained.
 If any issues, check by yourself.
